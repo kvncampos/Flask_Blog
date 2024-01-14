@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+<body>
+
+<div class="blogs">
+    <h2>{{ blog['title'] }}</h2>
+    <h3>{{ blog['subtitle'] }}</h3>
+    <h4>{{ blog['body'] }} </h4>
+    <hr>
+</div>
+
+</body>
+<footer class="footer_blog">
+    <div class="blog_footer">
+        <a href= {{ home_page }} >Home Page</a>
+        <a href= {{ blog_link }} >Back to Blogs</a>
+    </div>
+</footer>
+</html>

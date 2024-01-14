@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+<body>
+<div>
+{%for blog in blogs%}
+    <div class="blogs">
+        <h2>{{ blog['title'] }}</h2>
+        <h3>{{ blog['subtitle'] }}</h3>
+        <a href= "{{ blog_link}}/{{ blog['id'] }}" class="links">Read More!</a>
+        <hr>
+    </div>
+{%endfor%}
+</div>
+</body>
+<footer class="footer_blog">
+    <a href= {{ home_page }} >Home Page</a>
+</footer>
+</html>

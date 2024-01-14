@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Guess</title>
+</head>
+<body>
+<div id="main">
+    {% if name %}
+    <h1>Hello {{ name.title() }},</h1>
+    <h3>I think you are {{ gender }}.</h3>
+    <h3>Your estimated age is {{ age }} years old.</h3>
+    {% else %}
+    <h1>Enter a Name '/guess/charles' to play!</h1>
+    {%endif%}
+</div>
+<footer>
+    <a href= {{ home_page }} >Home Page</a>
+    <a href= {{ blog_url }} >Blog Page</a>
+</footer>
+</body>
+</html>
